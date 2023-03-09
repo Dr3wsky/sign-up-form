@@ -1,13 +1,20 @@
-@font-face {
-    font-family: 'ralewaythin_italic';
-    src: url('raleway-italic-variablefont_wght-webfont.woff2') format('woff2'),
-         url('raleway-italic-variablefont_wght-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+/* Vars, style reset and fonts */
+:root {
+    --primary-dark: rgb(51, 44, 44);
+    --primary-light: rgb(121, 233, 118);
+    --background: rgb(134, 196, 155);
+    --secondary-light: #97949498;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 @font-face {
-    font-family: 'ralewaythin';
+    font-family: 'raleway';
     src: url('raleway-variablefont_wght-webfont.woff2') format('woff2'),
          url('raleway-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
@@ -15,28 +22,46 @@
 }
 
 @font-face {
-    font-family: 'montserratthin_italic';
-    src: url('montserrat-italic-variablefont_wght-webfont.woff2') format('woff2'),
-         url('montserrat-italic-variablefont_wght-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'montserratthin';
+    font-family: 'montserrat';
     src: url('montserrat-variablefont_wght-webfont.woff2') format('woff2'),
          url('montserrat-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-
-
-
 @font-face {
-    font-family: 'smokumregular';
+    font-family: 'smokum';
     src: url('smokum-regular-webfont.woff2') format('woff2'),
          url('smokum-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-size: contain;}
+
+
+/* Page layout and design */
+.left-container {
+    display: flex;
+    background-image: url('images/mcm-furniture.jpg');
+    background-size: cover;
+    width: 30%;
+}
+
+
+/* .footer {   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1F2937;
+    padding: 16px
+} */
+
+.signup-container {
+    display: flex;
+    background-color: #1F2937;
 }
