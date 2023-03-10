@@ -51,21 +51,38 @@
 body {
     display: flex;
     height: 100vh;
-    font-family: 'Hack', 'Texas Tango', 'Vanilla Whale', 'Philosopher';
+    font-family: 'Philosopher', 'Hack', 'Lucida Console', 'Lucida Sans Typewriter';
 }
 
 
 /* Page layout and design */
 .left-container {
     display: flex;
-    background-image: url('images/mcm-furniture.jpg');
+    background-image: url('images/mcm-furniture-scaledjpg.jpg');
     background-size: cover;
     width: 40%;
+    align-items:center;
+    padding-bottom: 30em;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Vanilla Whale';
+    color: rgb(41, 38, 38);
+    font-size: 164px;
+    width: 100%;
+    padding-top: 100px;
+    background-color: rgba(75, 73, 56, 0.35);
 }
 
+h1 {
+    text-align: center;
+}
 /* .footer {   
     display: flex;
     justify-content: space-around;
