@@ -15,8 +15,8 @@
 
 @font-face {
     font-family: 'Philosopher';
-    src: url('Philosopher.woff2') format('woff2'),
-        url('Philosopher.woff') format('woff');
+    src: url('fonts/Philosopher.woff2') format('woff2'),
+        url('fonts/Philosopher.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -24,29 +24,26 @@
 
 @font-face {
     font-family: 'Vanilla Whale';
-    src: url('VanillaWhale-Regular.woff2') format('woff2'),
-        url('VanillaWhale-Regular.woff') format('woff');
+    src: url('fonts/VanillaWhale-Regular.woff2') format('woff2'),
+        url('fonts/VanillaWhale-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'Texas Tango';
-    src: url('TexasTangoBOLDPERSONALUSE.woff2') format('woff2'),
-        url('TexasTangoBOLDPERSONALUSE.woff') format('woff');
+    src: url('fonts/TexasTangoBOLDPERSONALUSE.woff2') format('woff2'),
+        url('fonts/TexasTangoBOLDPERSONALUSE.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'Hack';
-    src: url('Hack-Regular.woff2') format('woff2'),
-        url('Hack-Regular.woff') format('woff');
+    src: url('fonts/Hack-Regular.woff2') format('woff2'),
+        url('fonts/Hack-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 
@@ -54,20 +51,19 @@
 body {
     display: flex;
     height: 100vh;
+    font-family: 'Hack', 'Texas Tango', 'Vanilla Whale', 'Philosopher';
 }
 
 
 /* Page layout and design */
 .left-container {
     display: flex;
-    font-family: 'montserrat';
     background-image: url('images/mcm-furniture.jpg');
     background-size: cover;
     width: 40%;
 }
 
 .title {
-    font-family: 'raleway';
 }
 
 /* .footer {   
