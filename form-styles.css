@@ -14,43 +14,61 @@
 }
 
 @font-face {
-    font-family: 'raleway';
-    src: url('raleway-variablefont_wght-webfont.woff2') format('woff2'),
-         url('raleway-variablefont_wght-webfont.woff') format('woff');
+    font-family: 'Philosopher';
+    src: url('Philosopher.woff2') format('woff2'),
+        url('Philosopher.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'montserrat';
-    src: url('montserrat-variablefont_wght-webfont.woff2') format('woff2'),
-         url('montserrat-variablefont_wght-webfont.woff') format('woff');
+    font-family: 'Vanilla Whale';
+    src: url('VanillaWhale-Regular.woff2') format('woff2'),
+        url('VanillaWhale-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'smokum';
-    src: url('smokum-regular-webfont.woff2') format('woff2'),
-         url('smokum-regular-webfont.woff') format('woff');
+    font-family: 'Texas Tango';
+    src: url('TexasTangoBOLDPERSONALUSE.woff2') format('woff2'),
+        url('TexasTangoBOLDPERSONALUSE.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hack';
+    src: url('Hack-Regular.woff2') format('woff2'),
+        url('Hack-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
+
 
 body {
     display: flex;
     height: 100vh;
-    background-size: contain;}
+}
 
 
 /* Page layout and design */
 .left-container {
     display: flex;
+    font-family: 'montserrat';
     background-image: url('images/mcm-furniture.jpg');
     background-size: cover;
-    width: 30%;
+    width: 40%;
 }
 
+.title {
+    font-family: 'raleway';
+}
 
 /* .footer {   
     display: flex;
