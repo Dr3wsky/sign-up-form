@@ -1,10 +1,12 @@
 /* Vars, style reset and fonts */
 :root {
-    --primary-dark: rgb(39, 24, 5);
+    --primary-dark: rgba(31, 51, 50, 0.932);
     --primary-light: rgb(224, 209, 166);
-    --background-neutral: rgba(253, 252, 250, 0.712);
-    --background-dark: rgba(50, 78, 76, 0.062);
+    --background-neutral: rgba(255, 251, 243, 0.849);
+    --background-dark: rgba(41, 75, 73, 0.932);
     --secondary-light: #fc9b4c23;
+    --primary-font: 'Hack';
+    --secondary-font: 'Philosopher';
 }
 
 *, ::before, ::after {
@@ -54,6 +56,7 @@ body {
     height: 100vh;
     font-family: 'Philosopher', 'Hack', 'Lucida Console', 'Lucida Sans Typewriter';
     background-size: contain;
+    overflow: hidden;
 }
 
 
@@ -83,7 +86,7 @@ body {
 .title {
     text-align: center;
     font-family: 'Vanilla Whale';
-    color:var(--primary-dark);
+    color: var(--primary-dark);
     font-size: 36px;
     width: 100%;
 }
@@ -93,7 +96,6 @@ img {
     min-width: 124px;
     justify-self: center;
 }
-
 
 .footer {   
     color:var(--primary-light);
@@ -121,6 +123,28 @@ img {
 
 .signup-container {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 65%;
     background-color: var(--background-neutral);
 }
+
+.blurb {
+    color: var(--background-dark); 
+    padding: 0px 124px 32px 32px;
+    font-size: 32px;
+    font-family: var(--primary-font);
+}
+
+em {
+    font-family: var(--secondary-font);
+    font-weight: bolder;
+}
+
+.form {
+    height: 324px;
+
+    background-color: white;
+}
+
