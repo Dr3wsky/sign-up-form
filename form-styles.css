@@ -1,6 +1,6 @@
 /* Vars, style reset and fonts */
 :root {
-    --primary-dark: rgb(51, 44, 44);
+    --primary-dark: rgb(39, 24, 5);
     --primary-light: rgb(224, 209, 166);
     --background: rgb(134, 196, 155);
     --secondary-light: #e9dbc298;
@@ -51,11 +51,8 @@
 body {
     display: flex;
     height: 100vh;
-<<<<<<< HEAD
     font-family: 'Philosopher', 'Hack', 'Lucida Console', 'Lucida Sans Typewriter';
-=======
     background-size: contain;
->>>>>>> temp
 }
 
 
@@ -64,7 +61,6 @@ body {
     display: flex;
     background-image: url('images/mcm-furniture-scaledjpg.jpg');
     background-size: cover;
-<<<<<<< HEAD
     width: 40%;
     align-items:center;
     padding-bottom: 30em;
@@ -72,33 +68,27 @@ body {
     overflow: hidden;
 }
 
-.title {
+.title-bar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--secondary-light);
+    width: 100%;
+    height: min-content;
+    padding: 12px;
+
+}
+
+.title {
     font-family: 'Vanilla Whale';
     color: rgb(41, 38, 38);
     font-size: 164px;
     width: 100%;
     padding-top: 100px;
     background-color: rgba(75, 73, 56, 0.35);
-}
-=======
-    width: 35%;
-}
-
-.title-bar {
-    display: flex;
-    background-color: var(--secondary-light);
-    width: 100%;
-    height: min-content;
-
-}
 
 
 
->>>>>>> temp
+
+
 
 h1 {
     text-align: center;
