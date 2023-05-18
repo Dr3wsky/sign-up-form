@@ -2,7 +2,8 @@
 :root {
     --primary-dark: rgb(39, 24, 5);
     --primary-light: rgb(224, 209, 166);
-    --background-neutral: rgb(226, 225, 224);
+    --background-neutral: rgba(253, 252, 250, 0.712);
+    --background-dark: rgba(50, 78, 76, 0.062);
     --secondary-light: #fc9b4c23;
 }
 
@@ -59,17 +60,20 @@ body {
 /* Page layout and design */
 .left-container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url('images/mountain-layers.jpg');
     background-size: cover;
     width: 35%;
     padding-top: 124px;
-    overflow: hidden;
 }
 
 .title-bar {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 12px;
+    align-items: center;
     justify-content: center;
     background-color: var(--secondary-light);
     height: min-content;
@@ -91,18 +95,32 @@ img {
 }
 
 
-
-/* .footer {   
+.footer {   
+    color:var(--primary-light);
+    text-align: center;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    background-color: #1F2937;
-    padding: 16px
-} */
+    align-content: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 24px;
+    height: 100%;
+    font-size: 16px;
+  }
+
+.am-github {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.am-github:hover {
+    transform: scale(1.25);
+}
 
 .signup-container {
     display: flex;
     width: 65%;
-    background-color: var(--primary-light);
+    background-color: var(--background-neutral);
 }
