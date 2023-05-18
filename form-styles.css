@@ -2,8 +2,8 @@
 :root {
     --primary-dark: rgb(39, 24, 5);
     --primary-light: rgb(224, 209, 166);
-    --background: rgb(134, 196, 155);
-    --secondary-light: #e9dbc298;
+    --background-neutral: rgb(226, 225, 224);
+    --secondary-light: #fc9b4c23;
 }
 
 *, ::before, ::after {
@@ -59,22 +59,19 @@ body {
 /* Page layout and design */
 .left-container {
     display: flex;
-    background-image: url('images/mcm-furniture-scaledjpg.jpg');
+    background-image: url('images/mountain-layers.jpg');
     background-size: cover;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    width: 35%;
+    padding-top: 124px;
     overflow: hidden;
 }
 
 .title-bar {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 12px;
     justify-content: center;
     background-color: var(--secondary-light);
-    width: 100%;
     height: min-content;
     padding: 24px;
 }
@@ -85,13 +82,6 @@ body {
     color:var(--primary-dark);
     font-size: 36px;
     width: 100%;
-}
-
-.logo {
-    display: flex;
-    flex-direction: column;
-    width:64px;
-    align-items: center;
 }
 
 img {   
@@ -113,6 +103,6 @@ img {
 
 .signup-container {
     display: flex;
-    /* width: 65%; */
+    width: 65%;
     background-color: var(--primary-light);
 }
