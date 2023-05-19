@@ -76,7 +76,7 @@ html body{
     flex-grow: 1;
     position: relative;
     width: 40vw;
-    min-width: 245px;
+    min-width: 164px;
     height: 100vh;
     background-image: url('images/mountain-layers.jpg');
     background-size: cover;
@@ -88,9 +88,7 @@ html body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6px;
     width: 100%;
-    min-width: min-content;
     padding: 2vw 2vw;
 }
 
@@ -101,7 +99,7 @@ html body{
 }
 
 img {   
-    width: 7rem;
+    width: 10rem;
     padding: 10px;
 }
 
@@ -156,7 +154,7 @@ em {
     justify-content: center;
     flex-direction: column;
     background-color: white;
-    padding: 2rem 2vw 2rem 2vw;
+    padding: 3rem 2vw 3rem 2vw;
     gap: 1rem;
     box-shadow:  5px 5px 4px rgba(0, 0, 0, 0.12);
 }
@@ -173,7 +171,8 @@ form {
     display: flex;
     width: 60vw;
     flex-flow: row wrap;
-    gap: 1.5rem;
+    gap: 3rem;
+    padding-right: 4.5rem;
     font-size: 1rem;
 }
 
@@ -205,20 +204,57 @@ input:focus {
   }
 
 input:invalid:focus {
-    border: 2px solid rgb(255, 69, 100)
+    border: 2px solid rgb(255, 69, 100);
 }
   
 input:focus:valid {
-    border: 2px solid rgb(102, 207, 204);
+    border: 2px solid rgb(74, 202, 198);
+}
+
+input:valid {
+    border: 2px solid rgb(41, 238, 41);
+}
+
+.submit-container {
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+}
+
+button[type='submit'] {
+    font-family: inherit;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.3rem;
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+    transition: transform 0.075s ease-in-out;
+}
+
+button[type='submit']:hover {
+    background-color: rgba(58, 102, 101, 0.932);
+    transform: scale(1.1);
+}
+
+button[type='submit']:active {
+    transform: scale(.95)
+}
+
+
+.submit-container p {
+    padding-top: 1rem;
+    padding-left: 0.25rem;
 }
 
 
 
 /* Media layout for small screen viewing */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     
     .main{
       flex-direction: column;
+      min-width: 125px;
     }
     .left-container{
       width: 100vw;
@@ -232,13 +268,17 @@ input:focus:valid {
 
     .blurb { 
         padding-top: 1rem;
+        text-align: center;
     }
 
-    .form-section, form, .submit-section{
+    form {
+        gap: 1rem;
+    }
+
+    .input-container, form, .submit-container{
         width: 100vw;
         justify-content: center;
         padding-right: 2rem;
+        text-align: center;
       }
 }
-   
-     /* ADD layout mods for small screen once form structure done!! */
