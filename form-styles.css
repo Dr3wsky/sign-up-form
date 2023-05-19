@@ -1,8 +1,8 @@
 /* Vars, style reset and fonts */
 :root {
     --primary-dark: rgba(31, 51, 50, 0.932);
+    --secondary-light:  rgba(212, 164, 124, 0.932);
     --primary-light: rgb(249, 250, 251);
-    --secondary-light: #fc9b4c23;
     --primary-font: 'Hack';
     --secondary-font: 'Philosopher';
 }
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: 'Philosopher';
+    font-family: Philosopher;
     src: url('fonts/Philosopher.woff2') format('woff2'),
         url('fonts/Philosopher.woff') format('woff');
     font-weight: normal;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'Vanilla Whale';
+    font-family: Vanilla Whale;
     src: url('fonts/VanillaWhale-Regular.woff2') format('woff2'),
         url('fonts/VanillaWhale-Regular.woff') format('woff');
     font-weight: normal;
@@ -32,7 +32,7 @@
 }
 
 @font-face {
-    font-family: 'Texas Tango';
+    font-family: Texas Tango;
     src: url('fonts/TexasTangoBOLDPERSONALUSE.woff2') format('woff2'),
         url('fonts/TexasTangoBOLDPERSONALUSE.woff') format('woff');
     font-weight: bold;
@@ -40,22 +40,35 @@
 }
 
 @font-face {
-    font-family: 'Hack';
+    font-family: Hack;
     src: url('fonts/Hack-Regular.woff2') format('woff2'),
         url('fonts/Hack-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+  }
 
-
-body {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    width: 100vw;
-    font-family: var(--primary-font);
+html body{
+  font-size: 1.2rem;
+  padding: 0px;
+  margin: 0px;
+  font-family: Hack, Philosopher, 'Lucida', 'Roboto';
 }
+
+.main{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
 
 .left-container {
     flex-grow: 1;
@@ -63,48 +76,41 @@ body {
     width: 40vw;
     min-width: 245px;
     height: 100vh;
-    min-height: 20%;
     background-image: url('images/mountain-layers.jpg');
     background-size: cover;
-    padding-top: 124px;
+    color: var(--primary-dark);
 }
 
 .title-bar {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
     min-width: min-content;
-    padding: 24px;
+    padding: 2vw 2vw;
 }
 
 .title {
     text-align: center;
     font-family: 'Vanilla Whale';
-    color: var(--primary-dark);
-    font-size: 36px;
-    width: 100%;
+    font-size: 2rem;
 }
 
 img {   
-    max-width: 20%;
-    min-width: 124px;
-    justify-self: center;
+    width: 7rem;
+    padding: 10px;
 }
 
 .footer {   
     position: absolute;
     bottom: 0px;
     right: 10px;
-    color:var(--primary-light);
+    color:var(--secondary-light);
     text-align: center;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-content: center;
-    justify-content: flex-end;
     gap: 10px;
     margin: 24px;
     font-size: 16px;
@@ -128,7 +134,7 @@ img {
     flex-grow: 2;
     width: 60vw;
     background-color: var(--primary-light);
-    min-width: 345px;
+    min-width: 245px;
 }
 
 .blurb {
@@ -154,3 +160,20 @@ em {
     box-shadow:  5px 5px 4px rgba(0, 0, 0, 0.12);;
     
 }
+
+@media screen and (max-width: 850px) {
+    
+    .main{
+      flex-direction: column;
+    }
+    .left-container{
+      width: 100vw;
+      height: 15rem;
+    }
+
+    .signup-container {
+        width: 100vw;
+        justify-content: center;
+    }
+   
+     /* ADD layout mods for small screen once form structure done!! */
