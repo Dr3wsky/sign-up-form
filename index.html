@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <div class="main">
   <div class="left-container">
     <div class="title-bar">
       <img src="/images/mountain-logo-removebg.png" alt="Minimalist mountain logo">
@@ -35,27 +36,31 @@
       <p>LET'S DO THIS!</p>
       <form action="index.html/path" method="post">
 
-        <label for="first_name">FIRST NAME</label>
-        <input type="text" id="first_name">
+        <label for="first_name">FIRST NAME
+          <input type="text" id="first_name" required>
+        </label>
 
-        <label for="last_name">LAST NAME</label>
-        <input type="text" id="last_name">
+        <label for="last_name">LAST NAME
+          <input type="text" id="last_name" required>
+        </label>
 
-        <label for="user_email">EMAIL</label>
-        <input type="email" id="user_email" name="email" placeholder="your.email@example.com">
+        <label for="user_email">E-MAIL
+          <input type="email" id="user_email" name="email" placeholder="your.email@example.com">
+        </label>
 
-        <label for="user_phone">PHONE NUMBER</label>
-        <input type="number" id="user_phone" name="telephone" placeholder="(123) 456-7890">
+        <label for="user_phone">PHONE NUMBER
+          <input type="tel" id="user_phone" name="telephone" placeholder="(123) 456-7890" required>
+        </label>
 
-        <label for="pwd">PASSOWORD</label>
-        <input type="password" id="pwd" name="password">
+        <label for="pwd">PASSOWORD
+          <input type="password" id="pwd" name="password" required>
+        </label>
 
-        <label for="pwd">CONFIRM PASSOWORD</label>
-        <input type="password" id="pwd_repeat" name="password_repeat">
-
-        <button type="submit">Submit</button>
-
+        <label for="pwd">CONFIRM PASSOWORD
+          <input type="password" id="pwd_repeat" name="password_repeat" required> 
+        </label>
       </form>
+
     </div>
     <div class="submit"></div>
     </div>
