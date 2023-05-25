@@ -201,10 +201,19 @@ input:focus {
     border: none;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
     outline: none;
+    border: 2px solid rgb(74, 202, 198);
 }
 
-input:focus {
-    border: 2px solid rgb(74, 202, 198);
+.hide-pseudo-valid:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid  rgb(34, 238, 34);
+}
+
+.hide-pseudo-invalid:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid red;;
 }
 
 .invalid {
@@ -214,6 +223,8 @@ input:focus {
 .valid {
     border: 2px solid rgb(34, 238, 34);
 }
+
+
 
 
 .error {

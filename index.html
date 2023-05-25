@@ -52,7 +52,10 @@
         </label>
 
         <label for="user-phone">PHONE NUMBER
-          <input type="tel" id="user-phone" name="telephone" placeholder="(123) 456-7890" required>
+          <input type="tel" id="user-phone" name="telephone" required
+            placeholder="123-456-7890"
+            maxlength="12" 
+            pattern= '[0-9]{3}-[0-9]{3}-[0-9]{4}'>
           <div id="user-phone-error" class="error"></div>
         </label>
 

@@ -8,7 +8,7 @@ const pwdC = document.querySelector('#pwdC');
 const firstNameError = document.querySelector('#first-name-error');
 const lastNameError = document.querySelector('#last-name-error');
 const userEmailError = document.querySelector('#user-email-error');
-const userPhoneError = document.querySelector('#user-pheone-error');
+const userPhoneError = document.querySelector('#user-phone-error');
 const pwdError = document.querySelector('#pwd-error');
 const pwdCError = document.querySelector('#pwdC-error');
 
@@ -17,7 +17,7 @@ const pwdCError = document.querySelector('#pwdC-error');
 // First Name
 firstName.addEventListener('pointerover', (event) => {
     if (firstName.value === '') {
-    firstNameError.textContent = 'Please type your first name';
+    firstNameError.textContent = 'Please enter your first name';
 }})
 
 firstName.addEventListener('focusout', (event) => {
@@ -45,3 +45,57 @@ lastName.addEventListener('focusout', (event) => {
         lastName.classList.add('valid');
         lastNameError.textContent = '';
 }})
+
+// Email
+userEmail.addEventListener('pointerover', (event) => {
+    if (userEmail.value === '') {
+        userEmailError.textContent = 'Please enter a valid emial address';
+}})
+
+userEmail.addEventListener('keyup', (event) => {
+    if (userEmail.value != '' && userEmail.checkValidity()) {
+        userEmail.classList.remove('hide-pseudo-invalid');
+        userEmail.classList.remove('invalid');
+        userEmail.classList.add('hide-pseudo-valid');
+        userEmail.classList.add('valid');
+        userEmailError.textContent = '';
+
+    } else {
+        userEmail.classList.remove('hide-pseudo-valid');
+        userEmail.classList.remove('valid');
+        userEmail.classList.add('hide-pseudo-invalid');
+        userEmail.classList.add('invalid');
+        userEmailError.textContent = 'Please enter a valid emial address';
+    }
+    console.log(userEmail.validity)
+    })
+
+// Telephone
+userPhone.addEventListener('pointerover', (event) => {
+    if (userPhone.value === '') {
+        userPhoneError.textContent = 'Please enter a 10-digit phone number';
+    }
+})
+
+userPhone.addEventListener('keyup', (event) => {
+    console.log(userPhone.validity);
+    if (userPhone.value != '' && userPhone.checkValidity()) {
+        userPhone.classList.remove('hide-pseudo-invalid');
+        userPhone.classList.remove('invalid');
+        userPhone.classList.add('hide-pseudo-valid');
+        userPhone.classList.add('valid');
+        userPhoneError.textContent = '';
+
+    } else {
+        userPhone.classList.remove('hide-pseudo-valid');
+        userPhone.classList.remove('valid');
+        userPhone.classList.add('hide-pseudo-invalid');
+        userPhone.classList.add('invalid');
+        if (userPhone.validity.patternMismatch) {
+            userPhoneError.textContent = 'Please enter in the format: 123-456-789';
+        }
+    }
+    })
+
+
+    
