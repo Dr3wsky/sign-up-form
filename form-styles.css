@@ -224,9 +224,6 @@ input:focus {
     border: 2px solid rgb(34, 238, 34);
 }
 
-
-
-
 .error {
     font-family: inherit;
     font-size: 0.8rem;
@@ -261,12 +258,10 @@ button[type='submit']:active {
     transform: scale(.95)
 }
 
-
 .submit-container p {
     padding-top: 1rem;
     padding-left: 0.25rem;
 }
-
 
 
 /* Media layout for small screen viewing */
