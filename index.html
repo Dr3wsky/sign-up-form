@@ -36,28 +36,34 @@
       <p>LET'S DO THIS!</p>
       <form action="index.html/path" method="post">
 
-        <label for="first_name">FIRST NAME
-          <input type="text" id="first_name" required>
+        <label for="first-name">FIRST NAME
+          <input type="text" id="first-name" required>
+          <div id="first-name-error" class="error"></div>
         </label>
 
-        <label for="last_name">LAST NAME
-          <input type="text" id="last_name" required>
+        <label for="last-name">LAST NAME
+          <input type="text" id="last-name" required>
+          <div id="last-name-error" class="error"></div>
         </label>
 
-        <label for="user_email">E-MAIL
-          <input type="email" id="user_email" name="email" placeholder="your.email@example.com">
+        <label for="user-email">E-MAIL
+          <input type="email" id="user-email" name="email" placeholder="your.email@example.com">
+          <div id="user-email-error" class="error"></div>
         </label>
 
-        <label for="user_phone">PHONE NUMBER
-          <input type="tel" id="user_phone" name="telephone" placeholder="(123) 456-7890" required>
+        <label for="user-phone">PHONE NUMBER
+          <input type="tel" id="user-phone" name="telephone" placeholder="(123) 456-7890" required>
+          <div id="user-phone-error" class="error"></div>
         </label>
 
         <label for="pwd">PASSOWORD
           <input type="password" id="pwd" name="password" required>
+          <div id="pwd-error" class="error"></div> 
         </label>
 
-        <label for="pwd">CONFIRM PASSOWORD
-          <input type="password" id="pwd_repeat" name="password_repeat" required> 
+        <label for="pwdC">CONFIRM PASSOWORD
+          <input type="password" id="pwdC" name="passwordC" required>
+          <div id="pwdC-error" class="error"></div>
         </label>
       </form>
 
