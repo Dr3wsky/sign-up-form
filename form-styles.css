@@ -201,19 +201,28 @@ input:focus {
     border: none;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
     outline: none;
-  }
-
-input:invalid:focus {
-    border: 2px solid rgb(255, 69, 100);
 }
-  
-input:focus:valid {
+
+input:focus {
     border: 2px solid rgb(74, 202, 198);
 }
 
-input:valid {
-    border: 2px solid rgb(41, 238, 41);
+.invalid {
+    border: 2px solid red;
 }
+
+.valid {
+    border: 2px solid rgb(34, 238, 34);
+}
+
+
+.error {
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: rgb(255, 69, 100);
+    position: absolute;
+    margin-top: 0.2rem;
+  }
 
 .submit-container {
     padding: 2rem 2rem;
