@@ -10,7 +10,16 @@ const lastNameError = document.querySelector('#last-name-error');
 const userEmailError = document.querySelector('#user-email-error');
 const userPhoneError = document.querySelector('#user-phone-error');
 const pwdError = document.querySelector('#pwd-error');
-const pwdCError = document.querySelector('#pwdC-error');
+const pwdErrorMsg1 = document.querySelector('#error1');
+const pwdErrorMsg2 = document.querySelector('#error2');
+const pwdErrorMsg3 = document.querySelector('#error3');
+const pwdCError = document.querySelector('#pwdC-error'); 
+
+errorMsg1 = 'Missing atleast 1 capital ';
+errorMsg2 = 'Missing atleast 1 number';
+errorMsg3 = 'Must be atleast 8 caracters';
+const regExpCaps = new RegExp(/[A-Z]/g);
+const regExpDigs = new RegExp(/[0-9]/g);   
 
 // Event listeners and validation functions
 
@@ -30,6 +39,7 @@ firstName.addEventListener('focusout', (event) => {
         firstName.classList.add('valid');
 }})
 
+
 // Last Name
 lastName.addEventListener('pointerover', (event) => {
     if (lastName.value === '') {
@@ -45,6 +55,7 @@ lastName.addEventListener('focusout', (event) => {
         lastName.classList.add('valid');
         lastNameError.textContent = '';
 }})
+
 
 // Email
 userEmail.addEventListener('pointerover', (event) => {
@@ -67,8 +78,8 @@ userEmail.addEventListener('keyup', (event) => {
         userEmail.classList.add('invalid');
         userEmailError.textContent = 'Please enter a valid emial address';
     }
-    console.log(userEmail.validity)
-    })
+})
+
 
 // Telephone
 userPhone.addEventListener('pointerover', (event) => {
@@ -78,7 +89,6 @@ userPhone.addEventListener('pointerover', (event) => {
 })
 
 userPhone.addEventListener('keyup', (event) => {
-    console.log(userPhone.validity);
     if (userPhone.value != '' && userPhone.checkValidity()) {
         userPhone.classList.remove('hide-pseudo-invalid');
         userPhone.classList.remove('invalid');
@@ -96,6 +106,40 @@ userPhone.addEventListener('keyup', (event) => {
         }
     }
     })
+
+
+// Password
+// Populat initial error messages
+pwd.addEventListener('pointerover', (event) => {
+    if (pwd.value === '') {
+        pwdErrorMsg1.textContent = errorMsg1;
+        pwdErrorMsg2.textContent = errorMsg2;
+        pwdErrorMsg3.textContent = errorMsg3;
+}})
+
+// Clear errors when conditions met. Re-populate when false
+pwd.addEventListener('keyup', (event) => {
+    console.log(regExpCaps.test(pwd.value))
+    console.log(regExpDigs.test(pwd.value))
+    console.log(pwd.value.length)
+    if (regExpCaps.test(pwd.value)) {
+        pwdErrorMsg1.textContent = '';
+    }
+    
+    if (regExpDigs.test(pwd.value)) {
+        pwdErrorMsg2.textContent = errorMsg2;
+    };
+
+    if (pwd.value.length > 8) {
+        pwdErrorMsg3.textContent = '';
+    } else {
+        pwdErrorMsg3.textContent = errorMsg3;
+    }
+});
+    
+
+
+
 
 
     
