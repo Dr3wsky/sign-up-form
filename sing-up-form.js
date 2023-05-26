@@ -18,8 +18,8 @@ const pwdCError = document.querySelector('#pwdC-error');
 errorMsg1 = 'Missing atleast 1 capital ';
 errorMsg2 = 'Missing atleast 1 number';
 errorMsg3 = 'Must be atleast 8 caracters';
-const regExpCaps = new RegExp(/[A-Z]/g);
-const regExpDigs = new RegExp(/[0-9]/g);   
+const regExpCaps = new RegExp(/[A-Z]/);
+const regExpDigs = new RegExp(/[0-9]/);   
 
 // Event listeners and validation functions
 
@@ -119,24 +119,74 @@ pwd.addEventListener('pointerover', (event) => {
 
 // Clear errors when conditions met. Re-populate when false
 pwd.addEventListener('keyup', (event) => {
-    console.log(regExpCaps.test(pwd.value))
-    console.log(regExpDigs.test(pwd.value))
-    console.log(pwd.value.length)
-    if (regExpCaps.test(pwd.value)) {
-        pwdErrorMsg1.textContent = '';
-    }
-    
-    if (regExpDigs.test(pwd.value)) {
+    console.log(pwd.checkValidity())
+    if (pwd.value === '') {
+        pwdErrorMsg1.textContent = errorMsg1;
         pwdErrorMsg2.textContent = errorMsg2;
-    };
-
-    if (pwd.value.length > 8) {
-        pwdErrorMsg3.textContent = '';
-    } else {
         pwdErrorMsg3.textContent = errorMsg3;
     }
-});
+
+    if (pwd.value !== '') {
+        pwd.classList.remove('hide-pseudo-valid');
+        pwd.classList.remove('valid');
+        pwd.classList.add('hide-pseudo-invalid');
+        pwd.classList.add('invalid');
+        if (regExpCaps.test(pwd.value)) {
+            pwdErrorMsg1.textContent = '';
+        } else {
+            pwdErrorMsg1.textContent = errorMsg1;
+        }
+        
+        if (regExpDigs.test(pwd.value)) {
+            pwdErrorMsg2.textContent = '';
+        } else {
+            pwdErrorMsg2.textContent = errorMsg2;
+        }
+
+        if (pwd.value.length > 8) {
+            pwdErrorMsg3.textContent = '';
+        } else {
+            pwdErrorMsg3.textContent = errorMsg3;
+        }}
     
+    if (pwd.value !== '' && 
+    pwdErrorMsg1.textContent === '' &&
+    pwdErrorMsg2.textContent === '' && 
+    pwdErrorMsg3.textContent === '') {
+        pwd.classList.remove('hide-pseudo-invalid');
+        pwd.classList.remove('invalid');
+        pwd.classList.add('hide-pseudo-valid');
+        pwd.classList.add('valid');
+    }
+});
+
+// Password Confirmation
+pwdC.addEventListener('pointerover', (event) => {
+    if (pwdC.value === '') {
+        pwdCError.textContent = 'Please confirm password';
+}})
+
+pwdC.addEventListener('keyup', (event) => {
+    if (pwdC.value === '') {
+        pwdCError.textContent = 'Please confirm password';
+    }
+
+    if (pwdC.value !== '' && pwdC.value !== pwd.value) {
+        pwdC.classList.remove('hide-pseudo-valid');
+        pwdC.classList.remove('valid');
+        pwdC.classList.add('hide-pseudo-invalid');
+        pwdC.classList.add('invalid');
+        pwdCError.textContent = 'Ensure passwords are matching';
+    }
+
+    if (pwdC.value !== '' && pwdC.value === pwd.value) {
+        pwdCError.textContent = '';
+        pwdC.classList.remove('hide-pseudo-invalid');
+        pwdC.classList.remove('invalid');
+        pwdC.classList.add('hide-pseudo-valid');
+        pwdC.classList.add('valid');
+    }
+})
 
 
 

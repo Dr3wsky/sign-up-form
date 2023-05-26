@@ -261,7 +261,7 @@ button[type='submit']:hover {
 }
 
 button[type='submit']:active {
-    transform: scale(0.9)
+    transform: scale(0.9);
 }
 
 .submit-container p {
