@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up</title>
+    <link rel="shortcut icon" href="images/login-favicon.ico" />
+    <link rel="stylesheet" href="form-styles.css" />
+    <script src="sing-up-form.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-Up</title>
-  <link rel="shortcut icon" href="images/login-favicon.ico" />
-  <link rel="stylesheet" href="form-styles.css">
-  <script src="sing-up-form.js" defer></script>
-</head>
+  <body>
+    <div class="main">
+      <div class="left-container">
+        <div class="title-bar">
+          <img
+            src="/images/mountain-logo-removebg.png"
+            alt="Minimalist mountain logo"
+          />
+          <div class="title"><h1>Western Life</h1></div>
+        </div>
+        <div class="footer">
+          <a
+            class="am-github"
+            href="https://github.com/Dr3wsky"
+            target="_blank"
+          >
+            Copyright &copy Dr3wsky
+            <script>
+              document.write(new Date().getFullYear());
+            </script></a
+          >
+        </div>
+      </div>
 
-<body>
-  <div class="main">
-  <div class="left-container">
-    <div class="title-bar">
-      <img src="/images/mountain-logo-removebg.png" alt="Minimalist mountain logo">
-      <div class="title"><h1>Western Life</h1></div>
+      <div class="signup-container">
+        <div class="blurb">
+          <p>Welcome Back !</p>
+          <p>Sign in below</p>
+        </div>
+
+        <div class="input-container">
+          <form id="login-form" action="#">
+            <label for="username"
+              >FIRST NAME
+              <input type="text" id="username" required />
+              <div id="username-error" class="error"></div>
+            </label>
+
+            <label for="pwd"
+              >PASSOWORD
+              <input
+                type="password"
+                id="pwd"
+                name="password"
+                required
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              />
+              <div id="pwd-error" class="error"></div>
+            </label>
+          </form>
+        </div>
+        <div class="submit-container">
+          <button type="submit" form="login-form">Login</button>
+          <p>New user?<a href="./index.html"> Sign up</a></p>
+        </div>
+      </div>
     </div>
-    <div class="footer">
-      <a class="am-github" href="https://github.com/Dr3wsky" target="_blank"> Copyright &copy Dr3wsky <script>
-       document.write(new Date().getFullYear())</script></a>
-    </div>
-  </div>
-    
-  <div class="signup-container">
-    <div class="blurb">
-      <p>Welcome Back !</p>
-      </br> 
-      <p>Sign in below</p>
-     </div>
-
-    <div class="input-container">
-      <form id="login-form" action="#">
-
-        <label for="username">FIRST NAME
-          <input type="text" id="username" required>
-          <div id="username-error" class="error"></div>
-        </label>
-
-        <label for="pwd">PASSOWORD
-          <input type="password" id="pwd" name="password" required
-          pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
-          <div id="pwd-error" class="error"></div> 
-        </label>
-      </form>
-
-    </div>
-    <div class="submit-container">
-      <button type="submit" form="login-form">Login</button>
-      <p>New user?<a href="./index.html"> Sign up</a></p>
-    </div>
-    </div>
-  </div>
-
-</body>
+  </body>
+</html>
